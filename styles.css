@@ -3,12 +3,13 @@ html {
   height: 100%;
 }
 
-
-
 .bot {
   position: absolute;
   right: 20px;
   bottom: 20px;
+}
+
+.bot i{
   background-color: rgb(66, 146, 135);
   color: white;
   border-radius: 35px;
