@@ -1,0 +1,99 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey
+    - Hello
+    - Good day
+    - Good morning
+
+- intent: internet_is_slow
+  examples: |
+    - internet is slow
+    - slow internet
+    - bad internet
+    - slow internet speeds
+    - high latency
+    - web page is slow
+
+- intent: phone_contract_done
+  examples: |
+    - phone contract is done
+    - phone contract is up
+    - contract is up
+    - ready for new phone
+    - looking for new phone
+
+- intent: book_appointment
+  examples: |
+    - book an appointment
+    - make an appointment
+    - talk to a salesperson
+
+- intent: talk_to_agent
+  examples: |
+    - talk to agent
+    - talk to a real person
+    - talk to person
+
+stories:
+ - story: greet and show internet plans
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: internet_is_slow
+   - action: utter_display_internet_plans
+
+ - story: greet and show available phones
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: phone_contract_done
+   - action: utter_display_available_phones
+
+ - story: greet and book appointment
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: book_appointment
+   - action: utter_display_times_dates_available
+
+ - story: greet and refer to agent
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: talk_to_agent
+   - action: utter_refer_to_agent
+
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi! What can I do for you?
+   utter_display_internet_plans:
+       - text: |
+           Here are the available plans!
+	   **Display data**
+       - text: |
+           If you would like to upgrade, here are your options!
+           **Display data**
+   utter_display_available_phones:
+       - text: |
+           If you're looking for a new phone, here's what we have!
+           **Display data**
+       - text: |
+           Here are the phones we currently offer!
+           **Display data**
+   utter_display_times_dates_available:
+       - text: |
+           If you'd like to book an appointment, here are the available times!
+           **Display data**
+       - text: |
+           Pick a time you are available for your appointment!
+           ** Display data**
+   utter_refer_to_agent:
+       - text: |
+           I will refer you to the next available agent!
+       - text: |
+           An agent will talk to you as soon as they are available!
