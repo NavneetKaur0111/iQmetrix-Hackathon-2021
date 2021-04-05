@@ -50,18 +50,37 @@ slots:
     type: bool
     influence_conversation: true
 responses:
-  utter_greet:
-  - buttons:
-    - payload: Check status of my order
-      title: Check status of my order
-    - payload: Start a return
-      title: Start a return
-    - payload: Check inventory
-      title: Check inventory
-    - payload: Subscribe to product updates
-      title: Subscribe to product updates
-    text: Hi there! I'm a demo bot from Rasa to help you with ordering shoes. How
-      can I help you?
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi! What can I do for you?
+   utter_display_internet_plans:
+       - text: |
+           Here are the available plans!
+	   **Display data**
+       - text: |
+           If you would like to upgrade, here are your options!
+           **Display data**
+   utter_display_available_phones:
+       - text: |
+           If you're looking for a new phone, here's what we have!
+           **Display data**
+       - text: |
+           Here are the phones we currently offer!
+           **Display data**
+   utter_display_times_dates_available:
+       - text: |
+           If you'd like to book an appointment, here are the available times!
+           **Display data**
+       - text: |
+           Pick a time you are available for your appointment!
+           ** Display data**
+  utter_refer_to_agent:
+       - text: |
+           I will refer you to the next available agent!
+       - text: |
+           An agent will talk to you as soon as they are available!
   utter_default:
   - text: I don't think I understand. Can you try providing more detail?
   - text: um, what did you just say to me?
