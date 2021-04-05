@@ -1,0 +1,150 @@
+version: "2.0"
+nlu:
+- intent: internet_is_slow
+  examples: |
+    - internet is slow
+    - slow internet
+    - bad internet
+    - slow internet speeds
+    - high latency
+    - web page is slow
+
+- intent: phone_contract_done
+  examples: |
+    - phone contract is done
+    - phone contract is up
+    - contract is up
+    - ready for new phone
+    - looking for new phone
+
+- intent: book_appointment
+  examples: |
+    - book an appointment
+    - make an appointment
+    - talk to a salesperson
+
+- intent: talk_to_agent
+  examples: |
+    - talk to agent
+    - talk to a real person
+    - talk to person
+- intent: product_updates
+  examples: |
+    - what's new on the site?
+    - how do I find out updates
+    - I'd like to sign up for updates
+    - Subscribe to product updates
+    - subscribe to updates
+    - i [don't](negation) want to subscribe
+    - I [do not](negation) subscribe
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - HEY
+    - heyy
+    - Hey!!!
+    - hallo?
+- intent: faq/promotions
+  examples: |
+    - what kind of deals do you have
+    - are you running anything for black friday
+- intent: chitchat/thanks
+  examples: |
+    - thx
+    - Awesome, thanks!
+    - thanks mate
+    - thank you
+- intent: chitchat/confirm_presence
+  examples: |
+    - are you there?
+- intent: chitchat/mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - cool beans
+- intent: chitchat/mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - this is not working
+    - you suck
+- intent: chitchat/bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: chitchat/goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: out_of_scope
+  examples: |
+    - mmm I can't see what you're saying
+    - I am looking forward to my best friend's wedding. Do you have any tuxedo's?
+    - hmmmm
+    - Can I?
+    - Well, okay then
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - why is the sky blue
+    - blah blah blah
+- intent: whats_your_name
+  examples: |
+    - can you tell me your name?
+    - what's your name?
