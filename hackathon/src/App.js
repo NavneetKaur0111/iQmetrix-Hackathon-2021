@@ -22,12 +22,35 @@ class App extends Component{
   handleAddingItems(e){
     e.preventDefault();
     if(this.state.input !== "" && this.state.input !== null){
+      this.handleGettingResponse(this.state.input);
       this.setState(prevstate => ({
         messages : [...prevstate.messages ,new ResponseText('outgoing', prevstate.input )],
         input : "",
         })
       )
     }
+  }
+
+  handleGettingResponse(text){
+    fetch('http://0661849c53df.ngrok.io/webhooks/rest/webhook', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "sender": "test_user",
+        "message": `${text}`,
+      })
+    })
+    .then(data => data.json())
+    .then(response => {
+      console.log(response);
+      this.setState(prevstate => ({
+        messages : [...prevstate.messages ,new ResponseText('incoming', response[0].text )],
+        })
+      )
+      });
   }
 
   handleOpenBox () {
