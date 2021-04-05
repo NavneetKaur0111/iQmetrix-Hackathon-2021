@@ -9,7 +9,8 @@ class App extends Component{
     this.state = { 
       input : "",
       open: false,
-      messages :[]
+      messages :[],
+      url: 'ab8d52b3ec16',
     };
     this.handleOpenBox = this.handleOpenBox.bind(this);
     this.handleAddingItems = this.handleAddingItems.bind(this);
@@ -32,7 +33,7 @@ class App extends Component{
   }
 
   handleGettingResponse(text){
-    fetch('http://0661849c53df.ngrok.io/webhooks/rest/webhook', {
+    fetch(`http://${this.state.url}.ngrok.io/webhooks/rest/webhook`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

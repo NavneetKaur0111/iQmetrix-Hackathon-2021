@@ -14,6 +14,7 @@ html {
   right: 20px;
   bottom: 20px;
   width: 30%;
+  margin-right: 20px;
 }
 
 .bot i{
@@ -37,7 +38,7 @@ html {
   padding: 10px;
   border: 2px solid teal;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .bot .chatbox .heading {
@@ -78,7 +79,7 @@ html {
   width: 70%;
   margin-right: 0px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   border: 2px ridge teal;
 }
 
@@ -92,5 +93,6 @@ button {
   background-color: teal;
   border: 2px solid teal;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
+  margin-left: 5px;
 }
