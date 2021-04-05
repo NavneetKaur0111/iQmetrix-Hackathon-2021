@@ -4,61 +4,31 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  
+- story: greet and show internet plans
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: internet_is_slow
+   - action: utter_display_internet_plans
 
-- story: order shoes
-  steps:
-  - intent: order_shoes
-  - action: utter_order_shoes
+ - story: greet and show available phones
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: phone_contract_done
+   - action: utter_display_available_phones
 
-# cancel stories
+ - story: greet and book appointment
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: book_appointment
+   - action: utter_display_times_dates_available
 
-- story: User stops product_stock
-  steps:
-  - active_loop: product_stock_form
-  - intent: deny
-  - action: utter_start_over
-  - action: utter_greet
-  - action: action_deactivate_loop
-  - active_loop: null
-
-- story: User stops order_status
-  steps:
-  - active_loop: order_status_form
-  - intent: deny
-  - action: utter_start_over
-  - action: utter_greet
-  - action: action_deactivate_loop
-  - active_loop: null
-
-- story: User stops cancel_form
-  steps:
-  - active_loop: cancel_form
-  - intent: deny
-  - action: utter_start_over
-  - action: utter_greet
-  - action: action_deactivate_loop
-  - active_loop: null
-
-- story: User stops return_form
-  steps:
-  - active_loop: return_form
-  - intent: deny
-  - action: utter_start_over
-  - action: utter_greet
-  - action: action_deactivate_loop
-  - active_loop: null
-
-- story: User stops product_updates_form
-  steps:
-  - active_loop: product_updates_form
-  - intent: deny
-  - action: utter_start_over
-  - action: utter_greet
-  - action: action_deactivate_loop
-  - active_loop: null
-
-# this is to demonstrate adding metadata to a response
-- story: user asks for name
-  steps:
-  - intent: whats_your_name
-  - action: action_give_name
+ - story: greet and refer to agent
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: talk_to_agent
+   - action: utter_refer_to_agent
