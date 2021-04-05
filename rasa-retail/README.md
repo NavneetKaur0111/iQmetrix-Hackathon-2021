@@ -1,5 +1,5 @@
 # What
-This is a chatbot solution demo for IQmethrix.
+This is a chatbot solution demo for IQmetrix.
 
 # Why
 Current AI has been becoming UI, the way of communication between
@@ -7,66 +7,71 @@ human and machine extended.
 
 # How
 
-1. dependencies
+1. Dependencies
     - ubuntu 20
     - Docker version 20.10.5
     - rasa command
     - duckling service
 
-The project was tested in ubuntu 20 with docker.
-The global rasa command is a shell script was use to replace the python rasa command
-
-  ```bash
-  #!/bin/bash
-  sudo docker run -it --rm --network host -v $(pwd):/app rasa/rasa:2.4.3-full $1
-  ```
-
-duckling service was also run in a docker container
-
-  ```bash
-  #!/bin/bash
-  sudo docker run -d --rm --network host -p 8000:8000 rasa/duckling
-  ```
-
-
-2. set up project, and set the git diroctory as your current work dirctory
-- clone this project
-   ```bash
-   #!/bin/bash
-   git clone 
-   ```
-- start duckling in you git dirctory
-   ```bash
-   ./duckling_start
-   ```
-- start duckling in you git dirctory
-   ```bash
-   rasa run
-   ```
-3. train model
-
-- prepare your training data
-
-  data/stories.yml - contains stories
-  data/nlu.yml - contains NLU training data
-  data/rules.yml - contains the rules upon which the bot responds to queries
-  actions/actions.py  - contains custom action/api code
-  domain.yml  - the domain file, including bot response templates
-  config.yml  - training configurations for the NLU pipeline and policy ensemble
-  tests/test_stories.yml  - end-to-end test stories
-
-- tran by command in terminal
-
+    The project was tested in ubuntu 20 with docker 20.10.5.
+    The global rasa command is a shell script was use to replace the python rasa command
+    
+      ```bash
+      #!/bin/bash
+      sudo docker run -it --rm --network host -v $(pwd):/app rasa/rasa:2.4.3-full $1
+      ```
+    
+    duckling service also runs in a docker container
+    
     ```bash
-      rasa train
+      #!/bin/bash
+      sudo docker run -d --rm --network host -p 8000:8000 rasa/duckling
     ```
 
-4. talk to your chatbot
+
+2. Set up project 
+   
+    - set the git directory as your current work directory
+
+    - clone this project
+       ```bash
+       #!/bin/bash
+       git clone 
+       ```
+    - start duckling in you git directory
+       ```bash
+       ./duckling_start
+       ```
+    - start duckling in you git dirctory
+       ```bash
+       rasa run
+       ```
+      
+3. Train model
+
+    - prepare your training data
+    
+      data/stories.yml - contains stories
+      data/nlu.yml - contains NLU training data
+      data/rules.yml - contains the rules upon which the bot responds to queries
+      actions/actions.py  - contains custom action/api code
+      domain.yml  - the domain file, including bot response templates
+      config.yml  - training configurations for the NLU pipeline and policy ensemble
+      tests/test_stories.yml  - end-to-end test stories
+    
+    - tran by command in terminal
+    
+        ```bash
+          rasa train
+        ```
+
+4. Talk to your chatbot
+   
       ```bash
       rasa shell --debug
       ```
 
-   or
+      or
 
       ```bash
       # https://rasa.com/docs/rasa/pages/action-server-api
