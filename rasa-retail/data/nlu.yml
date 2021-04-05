@@ -1,45 +1,33 @@
 version: "2.0"
 nlu:
-- intent: order_status
+- intent: internet_is_slow
   examples: |
-    - check status of my order
-    - when are my shoes coming in
-    - when will they get here
-    - I'd like to check the status of my order pls
-    - check status
-    - I'd like an update on my order
-    - Check status of my order
-    - I haven't received my order yet, can we check that?
-    - where is my order?
-    - I want to check the status of my order
-    - actually can I check the status of my order
-    - order status for example@rasa.com
-- intent: order_cancel
+    - internet is slow
+    - slow internet
+    - bad internet
+    - slow internet speeds
+    - high latency
+    - web page is slow
+
+- intent: phone_contract_done
   examples: |
-    - i'd like to cancel my order
-    - cancel my shoes
-    - I changed my mind on my order
-    - cancel my order
-- intent: return
+    - phone contract is done
+    - phone contract is up
+    - contract is up
+    - ready for new phone
+    - looking for new phone
+
+- intent: book_appointment
   examples: |
-    - start a return
-    - I don't want my shoes anymore
-    - how do I return these?
-    - return some shoes
-    - Which items are available to return?
-    - Start a return
-    - Okay. I would like to return some shoes I bought
-    - yeah I want to return something
-- intent: product_stock
+    - book an appointment
+    - make an appointment
+    - talk to a salesperson
+
+- intent: talk_to_agent
   examples: |
-    - do you have any [black](color) shoes in stock?
-    - what about [white](color) shoes
-    - what's your inventory
-    - are you out of size 9 shoes
-    - check inventory
-    - do you have my special shoes in stock
-    - Check inventory
-    - i'm looking for new shoes
+    - talk to agent
+    - talk to a real person
+    - talk to person
 - intent: product_updates
   examples: |
     - what's new on the site?
@@ -49,49 +37,6 @@ nlu:
     - subscribe to updates
     - i [don't](negation) want to subscribe
     - I [do not](negation) subscribe
-- intent: inform
-  examples: |
-    - example@rasa.com
-    - my email is example@yahoo.com
-    - it's example@gmail.com
-    - [black](color) shoes
-    - [white](color) ones
-    - I'm looking for [orange](color) shoes
-    - [brown](color)
-    - [blue](color)
-    - it's 123
-    - it's a@b.com
-    - xyz@hulaloo.ai
-    - gray
-    - [Maize](color) and [blue](color)
-    - wait actually that email is wrong. it should be asdf1@asdf.com
-    - asdf@asdf.com
-    - [Grey](color)
-    - test@test.com
-- intent: order_shoes
-  examples: |
-    - i want to buy shoes
-    - no, don't want to do a return, want to purchase new shoes
-    - since they're in stock, how about I place an order
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - Nah, I would not like to be added to the list
-    - nope
 - intent: greet
   examples: |
     - hey
@@ -112,17 +57,6 @@ nlu:
     - heyy
     - Hey!!!
     - hallo?
-- intent: faq/alternate_info
-  examples: |
-    - Can I provide a phone number instead?
-    - Can anyone look up my status with my e-mail address?
-- intent: faq/sizing_clarification
-  examples: |
-    - American or european sizing?
-- intent: faq/payment_methods
-  examples: |
-    - what kind of payment methods do you offer?
-    - how do I pay
 - intent: faq/promotions
   examples: |
     - what kind of deals do you have
@@ -136,10 +70,6 @@ nlu:
 - intent: chitchat/confirm_presence
   examples: |
     - are you there?
-- intent: chitchat/capabilities
-  examples: |
-    - What else can you do?
-    - what can you do?
 - intent: chitchat/mood_great
   examples: |
     - perfect
