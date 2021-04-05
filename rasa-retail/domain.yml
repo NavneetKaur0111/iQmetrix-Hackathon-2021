@@ -50,7 +50,6 @@ slots:
     type: bool
     influence_conversation: true
 responses:
-   responses:
    utter_greet:
        - text: |
            Hello! How can I help you?
