@@ -16,3 +16,7 @@ stories:
     steps:
       - intent: solution_types
       - action: utter_solution_types
+  - story: show inventory options
+    steps:
+      - intent: inventory_options
+      - action: utter_inventory_options
