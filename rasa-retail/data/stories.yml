@@ -1,34 +1,30 @@
 version: "2.0"
 stories:
-- story: intro
-  steps:
-  - intent: greet
-  - action: utter_greet
-  
-- story: greet and show internet plans
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: internet_is_slow
-   - action: utter_display_internet_plans
-
- - story: greet and show available phones
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: phone_contract_done
-   - action: utter_display_available_phones
-
- - story: greet and book appointment
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: book_appointment
-   - action: utter_display_times_dates_available
-
- - story: greet and refer to agent
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: talk_to_agent
-   - action: utter_refer_to_agent
+  - story: intro
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - story: greet and show internet plans
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: internet_is_slow
+      - action: utter_display_internet_plans
+  - story: greet and show available phones
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: phone_contract_done
+      - action: utter_display_available_phones
+  - story: greet and book appointment
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: book_appointment
+      - action: utter_display_times_dates_available
+  - story: greet and refer to agent
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: talk_to_agent
+      - action: utter_refer_to_agent
