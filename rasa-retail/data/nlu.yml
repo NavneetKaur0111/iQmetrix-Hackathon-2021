@@ -1,39 +1,14 @@
 version: "2.0"
 nlu:
-- intent: internet_is_slow
+- intent: business_types
   examples: |
-    - internet is slow
-    - slow internet
-    - bad internet
-    - slow internet speeds
-    - high latency
-    - web page is slow
-- intent: phone_contract_done
-  examples: |
-    - phone contract is done
-    - phone contract is up
-    - contract is up
-    - ready for new phone
-    - looking for new phone
-- intent: book_appointment
-  examples: |
-    - book an appointment
-    - make an appointment
-    - talk to a salesperson
-- intent: talk_to_agent
-  examples: |
-    - talk to agent
-    - talk to a real person
-    - talk to person
-- intent: product_updates
-  examples: |
-    - what's new on the site?
-    - how do I find out updates
-    - I'd like to sign up for updates
-    - Subscribe to product updates
-    - subscribe to updates
-    - i [don't](negation) want to subscribe
-    - I [do not](negation) subscribe
+    - what businesses do you support
+    - business types
+    - my business type is
+    - is my business qualified
+    - does my business benefit
+    - how does this work with my business
+    - what do you offer for this business
 - intent: greet
   examples: |
     - hey
@@ -141,7 +116,3 @@ nlu:
     - what is the weather
     - why is the sky blue
     - blah blah blah
-- intent: whats_your_name
-  examples: |
-    - can you tell me your name?
-    - what's your name?
