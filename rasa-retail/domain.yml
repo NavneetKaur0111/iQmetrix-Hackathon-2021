@@ -49,54 +49,31 @@ slots:
   survey_complete:
     type: bool
     influence_conversation: true
+    
+    
 responses:
   utter_greet:
     - text: |
         Hello! How can I help you?
     - text: |
         Hi! What can I do for you?
-  utter_display_internet_plans:
-    - text: |
-        Here are the available plans!
-        •  100mb speeds for $60 dollars/month
-        • 300mb speeds for $75 dollars/month
-        • 500mb speeds for $95 dollars/month
-    - text: |
-        If you would like to upgrade, here are your options!
-        • 100mb speeds for $60 dollars/month
-        • 300mb speeds for $75 dollars/month
-        • 500mb speeds for $95 dollars/month
-  utter_display_available_phones:
-    - text: |
-        If you're looking for a new phone, here's what we have!
-        • Apple iPhone 12 with 128gb for $899.99
-        • Samsung Galaxy 21 with 256gb for $999.99
-        • Apple iPhone 11 with 64 gb for $699.99
-    - text: |
-        Here are the phones we currently offer!
-        • Apple iPhone 12 with 128gb for $899.99
-        • Samsung Galaxy 21 with 256gb for $999.99
-        • Apple iPhone 11 with 64 gb for $699.99
-  utter_display_times_dates_available:
-    - text: |
-        If you'd like to book an appointment, here are the available times!
-        • April 12, 2021 at 11:30AM
-        • April 12, 2021 at 1:30PM
-    - text: |
-        Pick a time you are available for your appointment!
-        • April 12, 2021 at 11:30AM
-        • April 12, 2021 at 1:30PM
-  utter_refer_to_agent:
-    - text: |
-        I will refer you to the next available agent!
-        Your wait time is approximately 3 minutes.
-    - text: |
-        An agent will talk to you as soon as they are available!
-        Your wait time is approximately 6 minutes.
+  utter_show_business_types:
+  - text: 'What business type do you fit into?'
+  buttons:
+  - title: Tier 1 & 2 Carriers
+  payload: /tier_carriers
+  - title: Regional Carriers
+  payload: /region_carriers
+  - title: Wireline & Cable
+  payload: /wireline_carriers
+  - title: Authorized Retailers
+  payload: /auth_carriers
+  utter_contact:
+  - text: You can get in touch with us at iqsupport@email.com or visit our help center at [www.iqhelp.com](www.google.com).
+  
+  
   utter_default:
-  - text: I don't think I understand. Can you try providing more detail?
-  - text: um, what did you just say to me?
-  - text: beep, boop, don't understand
+  - text: I do not think I understand. Can you try providing more detail?
   utter_ask_order_status_form_email:
   - text: I can help you find the status of your order. What's your email address
       so I can find the order?
