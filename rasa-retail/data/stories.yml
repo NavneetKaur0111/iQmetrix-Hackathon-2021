@@ -4,27 +4,23 @@ stories:
     steps:
       - intent: greet
       - action: utter_greet
-  - story: greet and show internet plans
+  - story: show business types
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: internet_is_slow
-      - action: utter_display_internet_plans
-  - story: greet and show available phones
+      - intent: business_types
+      - action: utter_show_business_types
+  - story: show contact info
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: phone_contract_done
-      - action: utter_display_available_phones
-  - story: greet and book appointment
+      - intent: contact
+      - action: utter_contact
+  - story: show solution types
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: book_appointment
-      - action: utter_display_times_dates_available
-  - story: greet and refer to agent
+      - intent: solution_types
+      - action: utter_solution_types
+  - story: show inventory options
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: talk_to_agent
-      - action: utter_refer_to_agent
+      - intent: inventory_options
+      - action: utter_inventory_options
+   - story: show tier carrier desc
+     steps:
+       - intent: tier_carriers
+       - action: utter_tier_carriers

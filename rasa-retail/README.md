@@ -16,35 +16,41 @@ human and machine extended.
     The project was tested in ubuntu 20 with docker 20.10.5.
     The global rasa command is a shell script was use to replace the python rasa command
     
-      ```bash
-      #!/bin/bash
-      sudo docker run -it --rm --network host -v $(pwd):/app rasa/rasa:2.4.3-full $1
-      ```
+       ```bash
+       #!/bin/bash
+       sudo docker run -it --rm --network host -v $(pwd):/app rasa/rasa:2.4.3-full $1
+        ```
     
     duckling service also runs in a docker container
     
-    ```bash
-      #!/bin/bash
-      sudo docker run -d --rm --network host -p 8000:8000 rasa/duckling
-    ```
+        ```bash
+        #!/bin/bash
+        sudo docker run -d --rm --network host -p 8000:8000 rasa/duckling
+        ```
 
 
 2. Set up project 
-   
-    - set the git directory as your current work directory
 
     - clone this project
        ```bash
        #!/bin/bash
-       git clone 
+       git clone https://github.com/NavneetKaur0111/Hackathon.git
        ```
-    - start duckling in you git directory
+      
+    - set the git directory as your current work directory
+
+
+    - start duckling in directory directory
+
        ```bash
        ./duckling_start
        ```
-    - start duckling in you git dirctory
+
+    - start rasa service in directory directory
+
        ```bash
-       rasa run
+       rasa run --cors “*”;
+       ngrok tcp 5005;
        ```
       
 3. Train model
@@ -80,11 +86,60 @@ human and machine extended.
       --url http://localhost:5005/webhooks/rest/webhook \
       --header 'content-type: application/json' \
       --data '{
-      "message": "Hello"
+      "message": "book an appointment"
       }'
       ```
 
+      or
+   
+      ```bash
+      curl --request POST \
+      --url http://localhost:5005/webhooks/rest/webhook \
+      --header 'content-type: application/json' \
+      --data '{"message": "Hello"}'
+      ```
 
+      or
+
+      ```javascript
+      function request(sender,message,callback){
+         fetch('http://6.tcp.ngrok.io:12371/webhooks/rest/webhook', {
+            method: 'POST',
+            headers: {
+               'Accept': 'application/json',
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+               "sender": sender,  // sender ID of the user sending the message
+               "message": message
+            })
+         })
+      .then(response => response.json())
+      .then(data =>callback(data));
+      }
+      ```
+
+      or
+   
+      ```javascript
+
+         npm install axios
+   
+         require('axios').post(url, {
+            "sender": sender,  // sender ID of the user sending the message
+            "message": message
+         })
+         .then(function (response) {
+            console.log(response);
+         })
+         .catch(function (error) {
+            console.log(error);
+         });
+
+      ```
+   
+
+      
 ## Things you can ask the bot ( need to update, the following part copy from github of rasa https://github.com/RasaHQ/retail-demo)
 
 1. Check the status of an order
