@@ -7,7 +7,7 @@ class Chatbox extends Component{
       <div>
       <div className="chatbox">
         <div className="heading">
-            <h1>iQmetrix<sup>®</sup></h1>
+            <h1>iQbot<sup>®</sup></h1>
         </div>
         <div>
           <div className="message-box">
