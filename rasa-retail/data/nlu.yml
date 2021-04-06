@@ -16,6 +16,12 @@ nlu:
     - solutions
     - how many solutions do you offer
     - do you have a solution
+- intent: inventory_options
+  examples: |
+    - inventory management options
+    - what are your options for inventory management
+    - how does your inventory management work
+    - can you help with inventory management
 - intent: greet
   examples: |
     - hey
