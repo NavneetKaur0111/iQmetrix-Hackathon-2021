@@ -8,7 +8,6 @@ nlu:
     - slow internet speeds
     - high latency
     - web page is slow
-
 - intent: phone_contract_done
   examples: |
     - phone contract is done
@@ -16,13 +15,11 @@ nlu:
     - contract is up
     - ready for new phone
     - looking for new phone
-
 - intent: book_appointment
   examples: |
     - book an appointment
     - make an appointment
     - talk to a salesperson
-
 - intent: talk_to_agent
   examples: |
     - talk to agent
