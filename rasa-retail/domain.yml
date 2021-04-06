@@ -3,6 +3,10 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - order_status
+- tier_carriers
+- region_carriers
+- wireline_carriers
+- auth_carriers
 - order_cancel
 - return
 - product_stock
