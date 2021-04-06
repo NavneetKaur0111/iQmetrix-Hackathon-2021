@@ -10,7 +10,7 @@ class App extends Component{
       input : "",
       open: false,
       messages :[],
-      url: 'ab8d52b3ec16',
+      url: 'http://6.tcp.ngrok.io:12371/webhooks/rest/webhook',
     };
     this.handleOpenBox = this.handleOpenBox.bind(this);
     this.handleAddingItems = this.handleAddingItems.bind(this);
@@ -33,7 +33,7 @@ class App extends Component{
   }
 
   handleGettingResponse(text){
-    fetch(`http://${this.state.url}.ngrok.io/webhooks/rest/webhook`, {
+    fetch(`${this.state.url}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
