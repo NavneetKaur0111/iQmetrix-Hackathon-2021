@@ -64,27 +64,31 @@ responses:
     - text: |
         Hi! What can I do for you?
   utter_show_business_types:
-  - text: 'What business type do you fit into?'
+  - text: "What business type do you fit into?"
     buttons:
-      - title: Tier 1 & 2 Carriers
-        payload: /tier_carriers
-      - title: Regional Carriers
-        payload: /region_carriers
-      - title: Wireline & Cable
-        payload: /wireline_carriers
-      - title: Authorized Retailers
-        payload: /auth_carriers
+      - 
+        title: "Tier 1 & 2 Carriers"
+        payload: "/tier_carriers"
+      - 
+        title: "Regional Carriers"
+        payload: "/region_carriers"
+      - 
+        title: "Wireline & Cable"
+        payload: "/wireline_carriers"
+      - 
+        title: "Authorized Retailers"
+        payload: "/auth_carriers"
   utter_contact:
   - text: You can get in touch with us at iqsupport@email.com or visit our help center at www.iqhelp.com.
   utter_solution_types:
   - text: 'We offer solutions for: Retail Management, Point of Sale, Omnichannel, Payments, Integrations.'
   utter_inventory_options:
-  - text: Inventory Management
+  - text: "Inventory Management"
     buttons:
-      - title: Get a Demo
-        payload: /get_inv_demo
-      - title: Request Pricing
-        payload: /req_pricing
+      - title: "Get a Demo"
+        payload: "/get_inv_demo"
+      - title: "Request Pricing"
+        payload: "/req_pricing"
   utter_tier_carriers:
   - text: Tier 1 & 2 Carriers: Unify your customer experience across all your channels with our carrier retail software solutions. Read more here: https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers!
   
