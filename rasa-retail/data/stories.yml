@@ -12,3 +12,7 @@ stories:
     steps:
       - intent: contact
       - action: utter_contact
+  - story: show solution types
+    steps:
+      - intent: solution_types
+      - action: utter_solution_types
