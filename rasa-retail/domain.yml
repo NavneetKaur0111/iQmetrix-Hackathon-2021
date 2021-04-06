@@ -75,7 +75,7 @@ responses:
       - title: Authorized Retailers
         payload: /auth_carriers
   utter_contact:
-  - text: You can get in touch with us at iqsupport@email.com or visit our help center at [www.iqhelp.com](www.google.com).
+  - text: You can get in touch with us at iqsupport@email.com or visit our help center at www.iqhelp.com.
   utter_solution_types:
   - text: 'We offer solutions for: Retail Management, Point of Sale, Omnichannel, Payments, Integrations.'
   utter_inventory_options:
@@ -86,7 +86,7 @@ responses:
       - title: Request Pricing
         payload: /req_pricing
   utter_tier_carriers:
-  - text: Tier 1 & 2 Carriers: Unify your customer experience across all your channels with our carrier retail software solutions. Read more [here](https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers)!
+  - text: Tier 1 & 2 Carriers: Unify your customer experience across all your channels with our carrier retail software solutions. Read more here: https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers!
   
   utter_default:
   - text: I do not think I understand. Can you try providing more detail?
