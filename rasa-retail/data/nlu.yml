@@ -22,6 +22,17 @@ nlu:
     - what are your options for inventory management
     - how does your inventory management work
     - can you help with inventory management
+- intent: contact
+  examples: |
+    - how do i contact
+    - where do i contact
+    - can i email you
+    - how do i email you
+    - i need help
+    - i need support
+    - where do i find help
+    - where do i find support
+    - i want to contact support
 - intent: greet
   examples: |
     - hey
