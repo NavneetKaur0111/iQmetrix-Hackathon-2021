@@ -9,6 +9,13 @@ nlu:
     - does my business benefit
     - how does this work with my business
     - what do you offer for this business
+- intent: solution_types
+  examples: |
+    - what solutions do you offer
+    - do you have these solutions
+    - solutions
+    - how many solutions do you offer
+    - do you have a solution
 - intent: greet
   examples: |
     - hey
