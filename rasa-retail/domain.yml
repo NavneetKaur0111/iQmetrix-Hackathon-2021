@@ -90,7 +90,7 @@ responses:
       - title: "Request Pricing"
         payload: "/req_pricing"
   utter_tier_carriers:
-  - text: Tier 1 & 2 Carriers: Unify your customer experience across all your channels with our carrier retail software solutions. Read more here: https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers!
+  - text: Tier 1 & 2 Carriers - Unify your customer experience across all your channels with our carrier retail software solutions. Read more here -  https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers!
   
   utter_default:
   - text: I do not think I understand. Can you try providing more detail?
