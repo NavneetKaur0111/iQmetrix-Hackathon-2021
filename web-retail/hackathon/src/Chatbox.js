@@ -13,7 +13,17 @@ class Chatbox extends Component{
           <div className="message-box">
             {
               this.props.messages.map((msg,index) => {
-                return( <p key = {index} className= {`${msg.textType}`}> {msg.text} </p>)
+                return( <div key = {index} className= {`${msg.textType}`}> {msg.text}  
+                {
+                  msg.buttons ?
+                   <div class="buttons">
+                    {
+                      msg.buttons.map(button => {
+                        return <button className="b"><a  href="https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers" target="_blank" > {button.title} </a></button>
+                      })
+                    }
+                   </div> : null
+                 }</div>)
               })
             }
           </div>

@@ -25,7 +25,7 @@ class App extends Component{
     if(this.state.input !== "" && this.state.input !== null){
       this.handleGettingResponse(this.state.input);
       this.setState(prevstate => ({
-        messages : [...prevstate.messages ,new ResponseText('outgoing', prevstate.input )],
+        messages : [...prevstate.messages ,new ResponseText('outgoing', prevstate.input , null)],
         input : "",
         })
       )
@@ -46,9 +46,13 @@ class App extends Component{
     })
     .then(data => data.json())
     .then(response => {
-      console.log(response);
+      let buttons = null;
+      if(response[0].buttons)
+      {
+        buttons = response[0].buttons
+      }
       this.setState(prevstate => ({
-        messages : [...prevstate.messages ,new ResponseText('incoming', response[0].text )],
+        messages : [...prevstate.messages ,new ResponseText('incoming', response[0].text, buttons )],
         })
       )
       });
@@ -86,10 +90,11 @@ class App extends Component{
 }
 
 class ResponseText{
-  constructor(textType, text)
+  constructor(textType, text, buttons)
   {
      this.textType = textType;
      this.text = text;
+     this.buttons = buttons;
   }
 }
 
