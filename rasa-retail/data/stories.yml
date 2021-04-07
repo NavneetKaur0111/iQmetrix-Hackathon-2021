@@ -20,7 +20,7 @@ stories:
     steps:
       - intent: inventory_options
       - action: utter_inventory_options
-   - story: show tier carrier desc
-     steps:
+  - story: show tier carrier desc
+    steps:
        - intent: tier_carriers
        - action: utter_tier_carriers
