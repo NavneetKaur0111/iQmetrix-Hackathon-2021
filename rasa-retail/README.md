@@ -140,39 +140,3 @@ human and machine extended.
    
 
       
-## Things you can ask the bot ( need to update, the following part copy from github of rasa https://github.com/RasaHQ/retail-demo)
-
-1. Check the status of an order
-2. Return an item
-3. Cancel an item
-4. Search a product inventory for shoes
-5. Subscribe to product updates
-
-The bot can handle switching forms and cancelling a form, but not resuming a form after switching yet.
-
-The main flows have the bot retrieving or changing information in a SQLite database (the file `example.db`). You can use `initialize.db` to change the data that exists in this file.
-
-For the purposes of illustration, the bot has orders for the following email addresses:
-
-- `example@rasa.com`
-- `me@rasa.com`
-- `me@gmail.com`
-
-And these are the shoes that should show as in stock (size, color):
-
-```
-inventory = [(7, 'blue'),
-             (8, 'blue'),
-             (9, 'blue'),
-             (10, 'blue'),
-             (11, 'blue'),
-             (12, 'blue'),
-             (7, 'black'),
-             (8, 'black'),
-             (9, 'black'),
-             (10, 'black')
-            ]
-```
-
-
-
