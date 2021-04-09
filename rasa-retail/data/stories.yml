@@ -24,3 +24,7 @@ stories:
     steps:
        - intent: tier_carriers
        - action: utter_tier_carriers
+  - story: show careers
+    steps:
+       - intent: careers
+       - action: utter_careers
