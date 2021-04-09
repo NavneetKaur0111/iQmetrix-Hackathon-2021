@@ -9,6 +9,15 @@ nlu:
     - does my business benefit
     - how does this work with my business
     - what do you offer for this business
+- intent: careers
+  examples: |
+    - what jobs do you have
+    - i want to work here
+    - do you have careers
+    - can i see a careers page
+    - can you give me a job
+    - are you hiring
+    - what positions are available
 - intent: solution_types
   examples: |
     - what solutions do you offer
