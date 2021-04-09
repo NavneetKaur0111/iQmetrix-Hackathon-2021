@@ -93,7 +93,6 @@ responses:
   - text: Tier 1 & 2 Carriers - Unify your customer experience across all your channels with our carrier retail software solutions. Read more here -  https://www.iqmetrix.com/telecom-retail/tier-1-and-2-carriers!
   utter_careers:
   - text: Want a to join us and create great experiences? Find our postings at - https://recruiting.ultipro.ca/IQM5000IQM/JobBoard/cc4018f6-4e67-489d-a68a-20a6816437ed/?q=&o=postedDateDesc
-  utter_
   
   utter_default:
   - text: I do not think I understand. Can you try providing more detail?
